@@ -1,7 +1,7 @@
 {
     "name": "ssx/inplace",
     "description": "The inplace CLI project.",
-    "license": "MIT",
+    "license": "Apache-2.0",
     "require": {
         "symfony/console": "^2.3 || ^3.0",
         "herrera-io/phar-update": "~1.0",

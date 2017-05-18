@@ -7,8 +7,8 @@ a template repo.
 
 To install:
 
-    wget https://ssx.io/inplace/downloads/inplace-0.0.1.phar
-    sudo mv inplace-0.0.1.phar /usr/local/bin/inplace 
+    wget https://ssx.io/inplace/downloads/inplace-0.0.1.phar && chmod +x inplace-0.0.1.phar
+    sudo mv inplace-0.0.1.phar /usr/local/bin/inplace
 
 To run:
 

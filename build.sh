@@ -45,6 +45,7 @@ TAG=$1
 git checkout master
 git tag ${TAG}
 box build
+chmod +x inplace.phar
 
 #
 # Copy executable file into GH pages
