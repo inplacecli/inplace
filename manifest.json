@@ -1,7 +1,7 @@
 {
     "name": "inplace.phar",
-    "publicKey": "http://ssx.github.io/inplace/pubkeys/inplace-0.0.5.phar.pubkey",
-    "sha1": "SHA1(inplace.phar)= d247ef2618340c0a93964ba2064cc0e2122eb4ea",
-    "url": "http://ssx.github.io/inplace/downloads/inplace-0.0.5.phar",
-    "version": "0.0.5"
+    "publicKey": "http://ssx.github.io/inplace/pubkeys/inplace-0.0.1.phar.pubkey",
+    "sha1": "SHA1(inplace.phar)= 84a8feb476f8ea3f92062553e2fc74076dcdcd21",
+    "url": "http://ssx.github.io/inplace/downloads/inplace-0.0.1.phar",
+    "version": "0.0.1"
 }
