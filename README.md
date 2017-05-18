@@ -5,9 +5,14 @@ existing Github repository and place them into your local project. This
 is useful for adding a common CircleCI, license or README.md file from 
 a template repo.
 
+To install:
+
+    wget http://ssx.io/inplace/downloads/inplace-0.0.1.phar
+    sudo mv inplace-0.0.1.phar /usr/local/bin/inplace 
+
 To run:
 
-    ./inplace.phar fetch https://github.com/ssx/inplace-demo
+    inplace fetch https://github.com/ssx/inplace-demo
     
 Behind the scenes, this will close the repository locally and then check 
 for the existence of a `.inplace.yml` file which denotes the files within 
