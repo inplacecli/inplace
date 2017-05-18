@@ -63,8 +63,8 @@ JSON="${JSON},url:\"http://ssx.github.io/inplace/downloads/inplace-${TAG}.phar\"
 JSON="${JSON},version:\"${TAG}\""
 
 if [ -f inplace.phar.pubkey ]; then
-    cp inplace.phar.pubkey pubkeys/inplace-${TAG}.phar.pubkeys
-    git add pubkeys/inplace-${TAG}.phar.pubkeys
+    cp inplace.phar.pubkey pubkeys/inplace-${TAG}.phar.pubkey
+    git add pubkeys/inplace-${TAG}.phar.pubkey
     JSON="${JSON},publicKey:\"http://ssx.github.io/inplace/pubkeys/inplace-${TAG}.phar.pubkey\""
 fi
 
