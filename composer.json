@@ -1,0 +1,28 @@
+{
+    "name": "ssx/inplace",
+    "description": "The inplace CLI project.",
+    "license": "MIT",
+    "require": {
+        "symfony/console": "^2.3 || ^3.0",
+        "herrera-io/phar-update": "~1.0",
+        "kzykhys/git": "^0.1.2",
+        "symfony/yaml": "^3.2",
+        "symfony/filesystem": "^3.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "Inplace\\": "src/Inplace"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --colors=always"
+    }
+}

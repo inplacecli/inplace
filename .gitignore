@@ -1,0 +1,7 @@
+/vendor
+box.json
+private.key
+public.key
+.idea
+inplace.phar
+inplace.phar.pubkey

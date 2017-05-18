@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+<?php
+
+require __DIR__.'/../vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+
+$application = new Application('Inplace', '@package_version@');
+$application->add(new Inplace\Command\AddPackageCommand());
+$application->run();
