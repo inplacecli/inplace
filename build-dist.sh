@@ -79,6 +79,6 @@ cp inplace.tmp inplace
 rm inplace.tmp
 
 echo "New version created. Pushing..."
-// git push origin gh-pages
-// git push --tags
-// git push
+# git push origin gh-pages
+# git push --tags
+# git push
