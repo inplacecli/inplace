@@ -27,6 +27,6 @@
     },
     "bin": [
         "bin/inplace",
-        "bin/inplace.phar.pubkey"
+        "bin/inplace.pubkey"
     ]
 }
