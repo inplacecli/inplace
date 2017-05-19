@@ -45,7 +45,7 @@ box build
 rm -rf /tmp/inplace
 mkdir -p /tmp/inplace
 mv inplace.phar /tmp/inplace
-cp inplace.phar /tmp/inplace
+cp inplace.phar.pubkey /tmp/inplace
 
 # Copy executable file into GH pages
 git checkout gh-pages
