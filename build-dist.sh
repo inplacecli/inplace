@@ -46,7 +46,7 @@ chmod +x inplace.phar
 
 # Copy executable file into GH pages
 git checkout gh-pages
-mkdir -p release
+mkdir -p releases
 cp inplace.phar releases/
 cp inplace.phar.pubkey releases/
 git add .
