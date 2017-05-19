@@ -48,7 +48,7 @@ mv inplace.phar /tmp/inplace
 cp inplace.phar.pubkey /tmp/inplace
 
 # Copy executable file into GH pages
-git checkout--quiet gh-pages
+git checkout --quiet gh-pages
 mkdir -p releases
 cp /tmp/inplace/inplace.phar releases/
 cp /tmp/inplace/inplace.phar.pubkey releases/
