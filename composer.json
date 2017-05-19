@@ -26,7 +26,6 @@
         "test": "phpunit --colors=always"
     },
     "bin": [
-        "inplace",
-        "inplace.pubkey"
+        "inplace"
     ]
 }

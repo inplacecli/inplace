@@ -42,6 +42,8 @@ TAG=$1
 #
 git checkout master
 git tag ${TAG}
+echo ${TAG} > VERSION
+git add VERSION
 box build
 chmod +x inplace.phar
 
