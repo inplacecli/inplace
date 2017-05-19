@@ -9,6 +9,6 @@ if (file_exists(__DIR__.'/../../autoload.php')) {
 
 use Symfony\Component\Console\Application;
 
-$application = new Application('Inplace', '@package_version@');
+$application = new Application('Inplace', file_get_contents( __DIR__."/VERSION"));
 $application->add(new Inplace\Command\AddPackageCommand());
 $application->run();

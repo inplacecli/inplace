@@ -36,6 +36,8 @@ git checkout --quiet master
 
 TAG=$1
 
+cp inplace inplace.tmp
+sed -i -- 's/@package_version@/${TAG}/g' inplace
 
 #
 # Tag & build master branch
