@@ -46,6 +46,7 @@ git checkout master
 git tag ${TAG}
 echo ${TAG} > VERSION
 git add VERSION
+git commit -m "Bump version ${TAG}"
 box build
 chmod +x inplace.phar
 
