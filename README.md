@@ -7,9 +7,7 @@ a template repo.
 
 To install:
 
-    wget https://ssx.io/inplace/inplace.phar && \ 
-    wget https://ssx.io/inplace/inplace.phar.pubkey && \
-    sudo mv inplace.phar.* /usr/local/bin
+    composer global require ssx/inplace ^0
 
 To run:
 

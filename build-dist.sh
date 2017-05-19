@@ -42,6 +42,7 @@ git tag ${TAG}
 
 # Now build the .phar
 box build
+chmod +x inplace.phar inplace
 
 # Copy executable file into GH pages
 git checkout gh-pages
