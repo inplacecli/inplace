@@ -54,7 +54,7 @@ cp /tmp/inplace/inplace.phar releases/
 cp /tmp/inplace/inplace.phar.pubkey releases/
 git add .
 
-SHA1=$(openssl sha1 inplace.phar)
+SHA1=$(openssl sha1 releases/inplace.phar)
 
 JSON='name:"inplace.phar"'
 JSON="${JSON},sha1:\"${SHA1}\""
