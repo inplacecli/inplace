@@ -47,7 +47,9 @@ chmod +x inplace.phar
 # Copy executable file into GH pages
 git checkout gh-pages
 mkdir -p release
-cp inplace.phar* releases/
+cp inplace.phar releases/
+cp inplace.phar.pubkey releases/
+git add .
 
 SHA1=$(openssl sha1 inplace.phar)
 
