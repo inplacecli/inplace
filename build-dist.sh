@@ -40,11 +40,7 @@ git add VERSION
 git commit -m "Bump version ${TAG}"
 git tag ${TAG}
 
-sed -i -- 's/file_get_contents\( __DIR__\."/VERSION"\)/@package_version@/g' inplace
-
-
-exit(1);
-
+# Set the version token as we're building the .phar next
 sed -i -- 's/@package_version@/${TAG}/g' inplace
 
 # Now build the .phar
@@ -79,6 +75,9 @@ git commit -m "Bump version ${TAG}"
 # Go back to master
 #
 git checkout master
+
+# Reset the version token back
+sed -i -- 's/${TAG}/@package_version@/g' inplace
 
 echo "New version created. Pushing..."
 git push origin gh-pages
