@@ -9,7 +9,7 @@ if (file_exists(__DIR__.'/../../autoload.php')) {
 
 function determine_version() {
     if (Phar::running()) {
-        return "@package_version@";
+        return "@package_version@"."Installed via PHAR.";
     }
 
     return file_get_contents(__DIR__ . "/VERSION")."Installed via composer global.";

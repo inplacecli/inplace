@@ -42,21 +42,23 @@ git tag ${TAG}
 
 # Now build the .phar
 box build
-chmod +x inplace.phar inplace
+chmod +x inplace.phar
 
 # Copy executable file into GH pages
 git checkout gh-pages
+mkdir -p release
+cp inplace.phar* releases/
 
 SHA1=$(openssl sha1 inplace.phar)
 
 JSON='name:"inplace.phar"'
 JSON="${JSON},sha1:\"${SHA1}\""
-JSON="${JSON},url:\"https://ssx.github.io/inplace/inplace.phar\""
+JSON="${JSON},url:\"https://ssx.github.io/inplace/releases/inplace.phar\""
 JSON="${JSON},version:\"${TAG}\""
 
 if [ -f inplace.phar.pubkey ]; then
     git add inplace.phar.pubkey
-    JSON="${JSON},publicKey:\"https://ssx.github.io/inplace/inplace.phar.pubkey\""
+    JSON="${JSON},publicKey:\"https://ssx.github.io/inplace/release/inplace.phar.pubkey\""
 fi
 
 # Update manifest
@@ -69,6 +71,6 @@ git commit -m "Bump version ${TAG}"
 git checkout --quiet master
 
 echo "New version created. Pushing..."
-# git push origin gh-pages
-# git push --tags
-# git push
+git push origin gh-pages
+git push --tags
+git push

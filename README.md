@@ -11,8 +11,8 @@ To install:
 
 Alternatively, if you would like the signed .phar version:
 
-    wget https://ssx.io/inplace/inplace.phar && 
-    wget https://ssx.io/inplace/inplace.phar.pubkey &&
+    wget https://ssx.io/inplace/releases/inplace.phar && 
+    wget https://ssx.io/inplace/releases/inplace.phar.pubkey &&
     sudo mv inplace* /usr/local/bin
 
 
