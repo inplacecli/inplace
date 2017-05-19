@@ -38,6 +38,7 @@ TAG=$1
 echo ${TAG} > VERSION
 git add VERSION
 git commit -m "Bump version ${TAG}"
+cp inplace inplace.tmp
 git tag ${TAG}
 
 # Now build the .phar
@@ -71,9 +72,13 @@ git commit -m "Bump version ${TAG}"
 #
 # Go back to master
 #
-git checkout master
+git checkout --quiet master
+
+# Revert box's versioning
+cp inplace.tmp inplace
+rm inplace.tmp
 
 echo "New version created. Pushing..."
-git push origin gh-pages
-git push --tags
-git push
+// git push origin gh-pages
+// git push --tags
+// git push
