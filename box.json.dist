@@ -5,6 +5,7 @@
     ],
     "files": [
         "LICENSE",
+        "VERSION",
         "vendor/herrera-io/phar-update/res/schema.json"
     ],
     "finder": [
@@ -14,7 +15,6 @@
             "in": "vendor"
         }
     ],
-    "git-version": "package_version",
     "main": "inplace",
     "output": "inplace.phar",
     "stub": true,

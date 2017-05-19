@@ -38,7 +38,6 @@ TAG=$1
 echo ${TAG} > VERSION
 git add VERSION
 git commit -m "Bump version ${TAG}"
-cp inplace inplace.tmp
 git tag ${TAG}
 
 # Now build the .phar
@@ -60,23 +59,14 @@ if [ -f inplace.phar.pubkey ]; then
     JSON="${JSON},publicKey:\"https://ssx.github.io/inplace/inplace.phar.pubkey\""
 fi
 
-#
 # Update manifest
-#
 cat manifest.json | jsawk -a "this.push({${JSON}})" | python -mjson.tool > manifest.json.tmp
 mv manifest.json.tmp manifest.json
 git add manifest.json
-
 git commit -m "Bump version ${TAG}"
 
-#
 # Go back to master
-#
 git checkout --quiet master
-
-# Revert box's versioning
-cp inplace.tmp inplace
-rm inplace.tmp
 
 echo "New version created. Pushing..."
 # git push origin gh-pages
