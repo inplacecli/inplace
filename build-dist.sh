@@ -33,23 +33,17 @@ command -v python >/dev/null 2>&1 || { echo "Error : Command python is not insta
 git checkout gh-pages
 git checkout --quiet master
 
-
+# Write the tag to the version file, then tag it
 TAG=$1
-
-#
-# Tag & build master branch
-#
-git checkout master
-git tag ${TAG}
 echo ${TAG} > VERSION
 git add VERSION
 git commit -m "Bump version ${TAG}"
-box build
-chmod +x inplace.phar
+git tag ${TAG}
 
-#
+# Now build the .phar
+box build
+
 # Copy executable file into GH pages
-#
 git checkout gh-pages
 
 SHA1=$(openssl sha1 inplace.phar)
