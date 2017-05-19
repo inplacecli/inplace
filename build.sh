@@ -7,7 +7,6 @@ if [ $# -ne 1 ]; then
   exit 65
 fi
 
-
 # CHECK MASTER BRANCH
 CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 if [[ "$CURRENT_BRANCH" != "master" ]]; then
@@ -17,7 +16,6 @@ fi
 
 # CHECK FORMAT OF THE TAG
 php -r "if(preg_match('/^\d+\.\d+\.\d+(?:-([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?(?:\+([0-9A-Za-z-]+(?:\.[0-9A-Za-z-]+)*))?\$/',\$argv[1])) exit(0) ;else{ echo 'format of version tag is not invalid' . PHP_EOL ; exit(1);}" $1
-
 
 # CHECK jsawk COMMAND
 command -v jsawk >/dev/null 2>&1 || { echo "Error : Command jsawk is not installed on the system"; echo "See : https://github.com/micha/jsawk "; echo  "Exiting..." >&2; exit 65; }
@@ -52,20 +50,16 @@ chmod +x inplace.phar
 #
 git checkout gh-pages
 
-cp inplace.phar downloads/inplace-${TAG}.phar
-git add downloads/inplace-${TAG}.phar
-
 SHA1=$(openssl sha1 inplace.phar)
 
 JSON='name:"inplace.phar"'
 JSON="${JSON},sha1:\"${SHA1}\""
-JSON="${JSON},url:\"http://ssx.github.io/inplace/downloads/inplace-${TAG}.phar\""
+JSON="${JSON},url:\"https://ssx.github.io/inplace/inplace.phar\""
 JSON="${JSON},version:\"${TAG}\""
 
 if [ -f inplace.phar.pubkey ]; then
-    cp inplace.phar.pubkey pubkeys/inplace-${TAG}.phar.pubkey
-    git add pubkeys/inplace-${TAG}.phar.pubkey
-    JSON="${JSON},publicKey:\"http://ssx.github.io/inplace/pubkeys/inplace-${TAG}.phar.pubkey\""
+    git add inplace.phar.pubkey
+    JSON="${JSON},publicKey:\"https://ssx.github.io/inplace/inplace.phar.pubkey\""
 fi
 
 #

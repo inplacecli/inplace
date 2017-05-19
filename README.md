@@ -7,9 +7,9 @@ a template repo.
 
 To install:
 
-    wget https://ssx.io/inplace/downloads/inplace-0.0.5.phar && \ 
-    wget https://ssx.io/inplace/pubkeys/inplace-0.0.5.phar.pubkey && \
-    sudo mv inplace-0.0.5.* /usr/local/bin/inplace
+    wget https://ssx.io/inplace/inplace.phar && \ 
+    wget https://ssx.io/inplace/inplace.phar.pubkey && \
+    sudo mv inplace.phar.* /usr/local/bin
 
 To run:
 

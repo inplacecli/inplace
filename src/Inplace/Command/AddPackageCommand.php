@@ -74,7 +74,7 @@ class AddPackageCommand extends Command
                 } else {
 
                     foreach ($yaml["files"] as $file) {
-                        $this->recursiveCopy($tmp_dir . "/" . $file, $pwd . $file);
+                        $this->recursiveCopy($tmp_dir . "/" . $file, $pwd ."/". $file);
                         $output->writeln('<fg=green> 📁  Placed ' . $file . ' into current directory from package: ' . $package . '</>');
                     }
 
