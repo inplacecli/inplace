@@ -42,13 +42,16 @@ git tag ${TAG}
 
 # Now build the .phar
 box build
-chmod +x inplace.phar
+rm -rf /tmp/inplace
+mkdir -p /tmp/inplace
+mv inplace.phar /tmp/inplace
+cp inplace.phar /tmp/inplace
 
 # Copy executable file into GH pages
 git checkout gh-pages
 mkdir -p releases
-cp inplace.phar releases/
-cp inplace.phar.pubkey releases/
+cp /tmp/inplace/inplace.phar releases/
+cp /tmp/inplace/inplace.phar.pubkey releases/
 git add .
 
 SHA1=$(openssl sha1 inplace.phar)
