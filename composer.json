@@ -24,5 +24,9 @@
     },
     "scripts": {
         "test": "phpunit --colors=always"
-    }
+    },
+    "bin": [
+        "bin/inplace",
+        "bin/inplace.phar.pubkey"
+    ]
 }
