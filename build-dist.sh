@@ -81,3 +81,4 @@ git checkout master
 echo "New version created. Pushing..."
 git push origin gh-pages
 git push --tags
+git push
