@@ -40,6 +40,13 @@ git add VERSION
 git commit -m "Bump version ${TAG}"
 git tag ${TAG}
 
+sed -i -- 's/file_get_contents\( __DIR__\."/VERSION"\)/@package_version@/g' inplace
+
+
+exit(1);
+
+sed -i -- 's/@package_version@/${TAG}/g' inplace
+
 # Now build the .phar
 box build
 chmod +x inplace.phar inplace
