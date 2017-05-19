@@ -48,10 +48,11 @@ mv inplace.phar /tmp/inplace
 cp inplace.phar.pubkey /tmp/inplace
 
 # Copy executable file into GH pages
-git checkout gh-pages
+git checkout--quiet gh-pages
 mkdir -p releases
 cp /tmp/inplace/inplace.phar releases/
 cp /tmp/inplace/inplace.phar.pubkey releases/
+rm -rf /tmp/inplace
 git add .
 
 SHA1=$(openssl sha1 releases/inplace.phar)
@@ -70,12 +71,11 @@ fi
 cat manifest.json | jsawk -a "this.push({${JSON}})" | python -mjson.tool > manifest.json.tmp
 mv manifest.json.tmp manifest.json
 git add manifest.json
-git commit -m "Bump version ${TAG}"
+git commit --quiet -m "Bump version ${TAG}"
 
 # Go back to master
 git checkout --quiet master
 
 echo "New version created. Pushing..."
-git push origin gh-pages
-git push --tags
-git push
+git push --quiet origin gh-pages
+git push --quiet --tags && git push
