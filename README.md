@@ -9,6 +9,13 @@ To install:
 
     composer global require ssx/inplace ^0
 
+Alternatively, if you would like the signed .phar version:
+
+    wget https://ssx.io/inplace/inplace.phar && 
+    wget https://ssx.io/inplace/inplace.phar.pubkey &&
+    sudo mv inplace* /usr/local/bin
+
+
 To run:
 
     inplace fetch https://github.com/ssx/inplace-demo
