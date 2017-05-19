@@ -15,7 +15,7 @@
         }
     ],
     "git-version": "package_version",
-    "main": "bin/inplace",
+    "main": "inplace",
     "output": "inplace.phar",
     "stub": true,
     "key": "private.key"
