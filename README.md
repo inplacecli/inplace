@@ -45,5 +45,4 @@ issue within this repository.
 
 ### Security
 If you have security feedback, please contact me via email at
-[security@ssx.email](security@ssx.email) and I'll usually respond as soon as possible.
- within the repository on [Github](https://github.com/ssx/inplace).
+<security@ssx.email> and I'll usually respond as soon as possible.
