@@ -32,6 +32,7 @@ files:
   - .drone.yml
 ```
 
+The Inplace tool and packages are written by [Scott Wilcox](https://github.com/ssx).
 
 ### License
 This project is licensed under an Apache 2.0 license which you can find
