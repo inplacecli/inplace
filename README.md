@@ -1,8 +1,8 @@
 # Inplace
 
 This is a tool that will allow you to download specified files from an
-existing Github repository and place them into your local project. This 
-is useful for adding a common CircleCI, license or README.md file from 
+existing Github repository and place them into your local project. This
+is useful for adding a common CircleCI, license or README.md file from
 a template repo.
 
 To install:
@@ -11,7 +11,7 @@ To install:
 
 Alternatively, if you would like the signed .phar version:
 
-    wget https://ssx.io/inplace/releases/inplace.phar && 
+    wget https://ssx.io/inplace/releases/inplace.phar &&
     wget https://ssx.io/inplace/releases/inplace.phar.pubkey &&
     sudo chmod +x inplace.phar && mv inplace* /usr/local/bin
 
@@ -19,26 +19,31 @@ Alternatively, if you would like the signed .phar version:
 To run:
 
     inplace fetch https://github.com/ssx/inplace-demo
-    
-Behind the scenes, this will close the repository locally and then check 
-for the existence of a `.inplace.yml` file which denotes the files within 
+
+Behind the scenes, this will close the repository locally and then check
+for the existence of a `.inplace.yml` file which denotes the files within
 the repository to copy into the current directory.
 
 This is the format of an `.inplace.yml` file:
 
 ```yaml
-files: 
+files:
   - circle.yml
   - .drone.yml
 ```
 
-### License
 
-This project is licensed under an Apache 2.0 license which you can find within
-this repository in the [LICENSE file](https://github.com/ssx/inplace/blob/master/LICENSE).
+### License
+This project is licensed under an Apache 2.0 license which you can find
+[in this LICENSE](https://github.com/inplacecli/inplace/blob/master/LICENSE).
 
 
 ### Feedback
-
 If you have any feedback, comments or suggestions, please feel free to open an
-issue within the repository on [Github](https://github.com/ssx/inplace).
+issue within this repository.
+
+
+### Security
+If you have security feedback, please contact me via email at
+[security@ssx.email](security@ssx.email) and I'll usually respond as soon as possible.
+ within the repository on [Github](https://github.com/ssx/inplace).
