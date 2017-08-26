@@ -7,18 +7,18 @@ a template repo.
 
 To install:
 
-    composer global require ssx/inplace ^0
+    composer global require inplacecli/inplace ^0
 
 Alternatively, if you would like the signed .phar version:
 
-    wget https://ssx.io/inplace/releases/inplace.phar &&
-    wget https://ssx.io/inplace/releases/inplace.phar.pubkey &&
+    wget https://inplacecli.github.io/inplace/releases/inplace.phar &&
+    wget https://inplacecli.github.io/inplace/releases/inplace.phar.pubkey &&
     sudo chmod +x inplace.phar && mv inplace* /usr/local/bin
 
 
 To run:
 
-    inplace fetch https://github.com/ssx/inplace-demo
+    inplace fetch https://github.com/inplacecli/demo
 
 Behind the scenes, this will close the repository locally and then check
 for the existence of a `.inplace.yml` file which denotes the files within
