@@ -1,6 +1,6 @@
 {
-    "name": "ssx/inplace",
-    "description": "The inplace CLI project.",
+    "name": "inplacecli/inplace",
+    "description": "The Inplace CLI project.",
     "license": "Apache-2.0",
     "require": {
         "symfony/console": "^2.3 || ^3.0",
