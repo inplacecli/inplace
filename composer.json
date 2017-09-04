@@ -2,6 +2,14 @@
     "name": "inplacecli/inplace",
     "description": "The Inplace CLI project.",
     "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Scott Wilcox",
+            "email": "scott@dor.ky",
+            "homepage": "https://github.com/ssx",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "symfony/console": "^2.3 || ^3.0",
         "herrera-io/phar-update": "~1.0",
