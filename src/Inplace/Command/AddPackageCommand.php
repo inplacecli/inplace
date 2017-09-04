@@ -1,5 +1,15 @@
 <?php
 
+/*
+ * This file is part of inplace/inplace
+ *
+ *  (c) Scott Wilcox <scott@dor.ky>
+ *
+ *  For the full copyright and license information, please view the LICENSE
+ *  file that was distributed with this source code.
+ *
+ */
+
 namespace Inplace\Command;
 
 use Symfony\Component\Console\Command\Command;
@@ -22,7 +32,8 @@ class AddPackageCommand extends Command
                 'packages',
                 InputArgument::IS_ARRAY,
                 'Name of the Github repos to inplace into the current directory'
-            );;
+            );
+        ;
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -72,12 +83,10 @@ class AddPackageCommand extends Command
                 if ((!array_key_exists("files", $yaml) || count($yaml["files"]) === 0)) {
                     $output->writeln('<error> ❌  No files listed to place in .inplace.yml for package: ' . $package . ', skipping</error>');
                 } else {
-
                     foreach ($yaml["files"] as $file) {
                         $this->recursiveCopy($tmp_dir . "/" . $file, $pwd ."/". $file);
                         $output->writeln('<fg=green> 📁  Placed ' . $file . ' into current directory from package: ' . $package . '</>');
                     }
-
                 }
             } catch (ParseException $e) {
                 $output->writeln('<error> ❌  Unable to parse .inplace.yml for : ' . $package . ', skipping</error>');
